@@ -1,5 +1,5 @@
 pkgname=calamares
-pkgver=3.1.13
+pkgver=3.2
 pkgrel=2
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
@@ -31,20 +31,20 @@ makedepends=('extra-cmake-modules'
              'boost')
 
 
-source+=("https://github.com/calamares/calamares/releases/download/v${pkgver}/calamares-${pkgver}.tar.gz"
+source+=("https://github.com/calamares/calamares/archive/v${pkgver}-rc4/calamares-${pkgver}-rc4.tar.gz"
          git+https://github.com/NorcuxOS/calamares-configs#branch=master)
 
 sha256sums=('SKIP')
 
 prepare() {
-    cp -a ${srcdir}/calamares-configs/* ${srcdir}/calamares-${pkgver}
+    cp -a ${srcdir}/calamares-configs/* ${srcdir}/calamares-${pkgver}-rc4
     rm -rf ${srcdir}/calamares-configs
-    cd ${srcdir}/calamares-${pkgver}
+    cd ${srcdir}/calamares-${pkgver}-rc4
 }
 
 
 build() {
-    cd ${srcdir}/calamares-${pkgver}
+    cd ${srcdir}/calamares-${pkgver}-rc4
 
     mkdir -p build
     cd build
@@ -62,7 +62,7 @@ build() {
 }
 
 package() {
-    cd ${srcdir}/calamares-${pkgver}/build
+    cd ${srcdir}/calamares-${pkgver}-rc4/build
     make DESTDIR="$pkgdir" install
     install -Dm644 "../calamares.desktop" "$pkgdir/usr/share/applications/calamares.desktop"
 	install -Dm755 "../data/calamares_polkit" "$pkgdir/usr/bin/calamares_polkit"
