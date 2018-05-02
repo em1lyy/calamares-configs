@@ -4,7 +4,7 @@ Version=1.0
 Name=System Installer
 Keywords=calamares;system;installer
 TryExec=calamares
-Exec=pkexec /usr/bin/calamares
+Exec=export XDG_CONFIG_HOME=$HOME/.kde-light && sudo -E /usr/bin/calamares
 Comment=Calamares — System Installer
 Icon=calamares
 Terminal=false
