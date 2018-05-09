@@ -10,7 +10,7 @@ welcomeStyleCalamares:   false
 
 # Should the welcome image (productWelcome, below) be scaled
 # up beyond its natural size?
-welcomeExpandingLogo:   true
+welcomeExpandingLogo:   false
 
 strings:
     productName:         Norcux OS
@@ -18,7 +18,7 @@ strings:
     version:             Alpha 0.5
     shortVersion:        Alpha 0.5
     versionedName:       Norcux OS Alpha 0.5
-    shortVersionedName:  Norcux OS Alpha 0.5
+    shortVersionedName:  Norcux OS Alpha
     bootloaderEntryName: Norcux OS
     productUrl:          http://NorcuxOS.org/
     supportUrl:          http://calamares.io/bugs/
