@@ -34,7 +34,8 @@ makedepends=('extra-cmake-modules'
 source+=("https://github.com/calamares/calamares/archive/v${pkgver}/calamares-${pkgver}.tar.gz"
          git+https://github.com/NorcuxOS/calamares-configs#branch=master)
 
-sha256sums=('SKIP')
+sha256sums=('SKIP'
+            'SKIP')
 
 prepare() {
     cp -a ${srcdir}/calamares-configs/* ${srcdir}/calamares-${pkgver}
