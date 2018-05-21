@@ -62,7 +62,7 @@ build() {
 }
 
 package() {
-    cd ${srcdir}/calamares-${pkgver}-rc4/build
+    cd ${srcdir}/calamares-${pkgver}/build
     make DESTDIR="$pkgdir" install
     install -Dm644 "../calamares.desktop" "$pkgdir/usr/share/applications/calamares.desktop"
 	install -Dm755 "../data/calamares_polkit" "$pkgdir/usr/bin/calamares_polkit"
