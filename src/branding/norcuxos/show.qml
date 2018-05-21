@@ -15,6 +15,10 @@
  *   You should have received a copy of the GNU General Public License
  *   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
  */
+ 
+ /*
+ * Slides images dimensions are 800x440px.
+ */
 
 import QtQuick 2.0;
 import calamares.slideshow 1.0;
@@ -35,7 +39,7 @@ Presentation
         Image {
             id: background1
             source: "slide1.png"
-            width: 467; height: 280
+            width: 800; height: 440
             fillMode: Image.PreserveAspectFit
             anchors.centerIn: parent
         }
@@ -45,7 +49,7 @@ Presentation
             text: "Welcome to Norcux OS<br/>"+
                   "During the installation, this slideshow will provide a quick introduction."
             wrapMode: Text.WordWrap
-            width: 600
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
@@ -55,7 +59,7 @@ Presentation
         Image {
             id: background2
             source: "slide2.png"
-            width: 467; height: 280
+            width: 800; height: 440
             fillMode: Image.PreserveAspectFit
             anchors.centerIn: parent
         }
@@ -65,7 +69,7 @@ Presentation
             text: "Placeholder<br/>"+
                   "Description"
             wrapMode: Text.WordWrap
-            width: 600
+            width: 800
             horizontalAlignment: Text.Center
         }
     }
