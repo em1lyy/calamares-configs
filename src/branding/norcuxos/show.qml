@@ -1,4 +1,4 @@
-/* === This file is based on parts of Calamares - <http://github.com/calamares> ===
+/* === This file is based on a part of Calamares - <http://github.com/calamares> ===
  *
  *   Copyright 2015, Teo Mrnjavac <teo@kde.org>
  *
@@ -21,13 +21,53 @@ import calamares.slideshow 1.0;
 
 Presentation
 {
-    //Slide 1
+    id: presentation
+
+    Timer {
+        interval: 20000
+        running: true
+        repeat: true
+        onTriggered: presentation.goToNextSlide()
+    }
+    
     Slide {
-        //TODO
+
+        Image {
+            id: background1
+            source: "slide1.png"
+            width: 467; height: 280
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
+        Text {
+            anchors.horizontalCenter: background1.horizontalCenter
+            anchors.top: background1.bottom
+            text: "Welcome to Norcux OS<br/>"+
+                  "During the installation, this slideshow will provide a quick introduction."
+            wrapMode: Text.WordWrap
+            width: 600
+            horizontalAlignment: Text.Center
+        }
     }
 
-    //Slide 2
     Slide {
-        //TODO
+
+        Image {
+            id: background2
+            source: "slide2.png"
+            width: 467; height: 280
+            fillMode: Image.PreserveAspectFit
+            anchors.centerIn: parent
+        }
+        Text {
+            anchors.horizontalCenter: background2.horizontalCenter
+            anchors.top: background2.bottom
+            text: "Placeholder<br/>"+
+                  "Description"
+            wrapMode: Text.WordWrap
+            width: 600
+            horizontalAlignment: Text.Center
+        }
     }
+
 }
