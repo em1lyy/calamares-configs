@@ -1,5 +1,5 @@
 ---
 type:       "job"
-name:       "mrpacman"
+name:       "packages"
 interface:  "python"
 script:     "main.py"
