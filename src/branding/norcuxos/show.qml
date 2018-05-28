@@ -1,3 +1,4 @@
+
 /* === This file is based on a part of Calamares - <http://github.com/calamares> ===
  *
  *   Copyright 2015, Teo Mrnjavac <teo@kde.org>
@@ -15,63 +16,57 @@
  *   You should have received a copy of the GNU General Public License
  *   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
  */
- 
- /*
+
+/*
  * Slides images dimensions are 800x440px.
  */
 
-import QtQuick 2.0;
-import calamares.slideshow 1.0;
+import QtQuick 2.0
+import calamares.slideshow 1.0
 
-Presentation
-{
+Presentation {
     id: presentation
 
-    Timer {
+    /*Timer {
         interval: 20000
         running: true
         repeat: true
         onTriggered: presentation.goToNextSlide()
-    }
-    
+    }*/
+
     Slide {
+        Rectangle {
+            id: rectangle
+            color: "#1c2127"
+            anchors.fill: parent
+        }
 
         Image {
-            id: background1
-            source: "slide1.png"
-            width: 800; height: 440
+            id: background
+            source: "file:///usr/share/icons/Papirus-Adapta-Nokto/64x64/apps/clock.svg"
+            width: 128
+            height: 128
+            sourceSize.height: 128
+            sourceSize.width: 128
             fillMode: Image.PreserveAspectFit
             anchors.centerIn: parent
         }
+
         Text {
-            anchors.horizontalCenter: background1.horizontalCenter
+            anchors.horizontalCenter: background.horizontalCenter
             anchors.top: background1.bottom
-            text: "Welcome to Norcux OS<br/>"+
-                  "During the installation, this slideshow will provide a quick introduction."
+            verticalAlignment: Text.AlignVCenter
             wrapMode: Text.WordWrap
             width: 800
+            color: "#ffffff"
+            text: "Welcome to Norcux OS<br/>Please wait for the Installation to finish."
+            anchors.bottom: background.top
+            anchors.bottomMargin: 20
+            anchors.topMargin: -80
+            anchors.horizontalCenterOffset: 0
+            font.bold: true
+            font.pointSize: 18
             horizontalAlignment: Text.Center
         }
     }
-
-    Slide {
-
-        Image {
-            id: background2
-            source: "slide2.png"
-            width: 800; height: 440
-            fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
-        }
-        Text {
-            anchors.horizontalCenter: background2.horizontalCenter
-            anchors.top: background2.bottom
-            text: "Placeholder<br/>"+
-                  "Description"
-            wrapMode: Text.WordWrap
-            width: 800
-            horizontalAlignment: Text.Center
-        }
-    }
-
 }
