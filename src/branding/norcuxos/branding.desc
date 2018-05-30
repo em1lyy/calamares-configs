@@ -15,12 +15,12 @@ welcomeExpandingLogo:   false
 strings:
     productName:         Norcux OS
     shortProductName:    Norcux OS
-    version:             Alpha 0.5
-    shortVersion:        Alpha 0.5
-    versionedName:       Norcux OS Alpha 0.5
+    version:             Alpha
+    shortVersion:        Alpha
+    versionedName:       Norcux OS Alpha
     shortVersionedName:  Norcux OS Alpha
     bootloaderEntryName: Norcux OS
-    productUrl:          http://NorcuxOS.org/
+    productUrl:          https://NorcuxOS.org/
     supportUrl:          http://calamares.io/bugs/
     knownIssuesUrl:      http://calamares.io/about/
     releaseNotesUrl:     http://calamares.io/about/
