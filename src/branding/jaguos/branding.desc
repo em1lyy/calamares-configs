@@ -15,9 +15,9 @@ welcomeExpandingLogo:   false
 strings:
     productName:         JaguOS
     shortProductName:    JaguOS
-    version:             18.09 "Panther"
+    version:             18.09
     shortVersion:        18.09
-    versionedName:       JaguOS 18.09 "Panther"
+    versionedName:       JaguOS 18.09
     shortVersionedName:  JaguOS 18.09
     bootloaderEntryName: JaguOS 18.09
     productUrl:          https://os.jagudev.net/
